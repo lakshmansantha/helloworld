@@ -2,8 +2,8 @@ pipeline {
   agent { label 'master' }
 
   tools {
-    jdk 'Java8'
-    maven 'Maven3.3.9'
+    jdk 'java8'
+    maven 'maven3.3.9'
   }
   
   environment {
@@ -23,10 +23,10 @@ stages {
     stage('Git checkout'){
       steps {
         git branch: '${Branch}',
-        url: 'https://github.com/chinni4321/helloworld.git'
+        url: 'https://github.com/lakshmansantha/helloworld.git'
       }
     }
-    /*stage('Maven build'){
+    /*stage('maven build'){
       steps {
         sh 'mvn clean install'
       }
